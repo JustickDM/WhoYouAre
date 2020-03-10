@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="VkUsersSearch.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" >
+
+	<UserControl.Resources>
+		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
+	</UserControl.Resources>
+
+	<Grid Background="#EDEEF0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Border BorderBrush="#4A76C9"
+                BorderThickness="1" 
+                CornerRadius="3"
+				Background="White"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center">
+
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="5"
+                                  Color="#4A76C9"
+								  ShadowDepth="0"/>
+			</Border.Effect>
+			
+			<Grid Grid.Row="0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+
+				<TextBlock Text="Имя:"
+						   Grid.Row="0"
+						   FontSize="12"
+						   Margin="5"/>
+				<TextBox Text="{Binding FirstName}"
+						 Grid.Row="1"
+						 Grid.Column="0"
+						 FontSize="20"
+						 Margin="5,5,5,5"
+						 FontWeight="Regular"
+						 BorderThickness="0"
+						 HorizontalContentAlignment="Center"/>
+				<Separator Grid.Row="1"
+						   Margin="5,25,5,0"
+						   Background="#4A76C9"/>
+
+				<TextBlock Text="Фамилию:"
+						   Grid.Row="2"
+						   FontSize="12"
+						   Margin="5"/>
+				<TextBox Text="{Binding LastName}"
+						 Grid.Row="3"
+						 Grid.Column="0"
+						 FontSize="20"
+						 Margin="5,5,5,5"
+						 FontWeight="Regular"
+						 BorderThickness="0"
+						 HorizontalContentAlignment="Center"/>
+				<Separator Grid.Row="3"
+						   Margin="5,25,5,0"
+						   Background="#4A76C9"/>
+
+				<TextBlock Text="Дата рождения:"
+						   Grid.Row="4"
+						   FontSize="12"
+						   Margin="5"/>
+				<TextBox Text="{Binding DateOfBirth}"
+						 Grid.Row="5"
+						 Grid.Column="0"
+						 FontSize="20"
+						 Margin="5,5,5,5"
+						 FontWeight="Regular"
+						 BorderThickness="0"
+						 HorizontalContentAlignment="Center"/>
+				<Separator Grid.Row="5"
+						   Margin="5,25,5,0"
+						   Background="#4A76C9"/>
+
+				<TextBlock Text="Id страницы ВКонтакте:"
+						   Grid.Row="6"
+						   FontSize="12"
+						   Margin="5"/>
+				<TextBox Text="{Binding PageId}"
+						 Grid.Row="7"
+						 Grid.Column="0"
+						 FontSize="20"
+						 Margin="5,5,5,5"
+						 FontWeight="Regular"
+						 BorderThickness="0"
+						 HorizontalContentAlignment="Center"/>
+				<Separator Grid.Row="7"
+						   Margin="5,25,5,0"
+						   Background="#4A76C9"/>
+
+				<Button Content="Войти"
+						Grid.Row="8"
+						Background="#4A76C9"
+						BorderBrush="Transparent"
+						Foreground="White"
+						FontFamily="Rototo"
+						Height="30"
+						Margin="5"
+						Command="{Binding NavigateTo1Command}"/>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>
