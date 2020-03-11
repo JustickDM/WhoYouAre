@@ -14,7 +14,7 @@
 									<StackPanel Orientation="Vertical" 
 											VerticalAlignment="Center"
 											SnapsToDevicePixels="True">
-										<Image Source="pack://application:,,,/Resources/Images/Back.png"
+										<Image Source="pack://application:,,,/Resources/Images/Icons/Back.png"
 											   Width="30"
 											   Height="30"/>
 									</StackPanel>

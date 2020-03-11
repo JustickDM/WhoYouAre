@@ -3,9 +3,10 @@ using MVVMAqua.ViewModels;
 
 using System.IO;
 using System.Text;
+
 using WhoYouAre.ViewModels.Questions;
 
-namespace WhoYouAre.ViewModels
+namespace WhoYouAre.ViewModels.Base
 {
 	internal abstract class BaseLanguageVM : BaseVM
 	{

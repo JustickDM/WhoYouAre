@@ -1,8 +1,9 @@
 ﻿using MVVMAqua.Commands;
+using MVVMAqua.ViewModels;
 
 namespace WhoYouAre.ViewModels.Questions
 {
-	internal sealed class Question1VM : BaseLanguageVM
+	internal sealed class Question1VM : BaseVM
 	{
 		public RelayCommand NavigateTo21Command { get; }
 		public RelayCommand NavigateTo22Command { get; }

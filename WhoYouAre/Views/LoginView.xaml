@@ -59,7 +59,7 @@
 						   Margin="5,25,5,0"
 						   Background="#4A76C9"/>
 
-				<TextBlock Text="Фамилию*"
+				<TextBlock Text="Фамилия*"
 						   Grid.Row="2"
 						   FontSize="12"
 						   Margin="5"/>

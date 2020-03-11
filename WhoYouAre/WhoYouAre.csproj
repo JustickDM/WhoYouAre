@@ -59,7 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\User.cs" />
-    <Compile Include="ViewModels\BaseLanguageVM.cs" />
+    <Compile Include="ViewModels\Base\BaseLanguageVM.cs" />
     <Compile Include="ViewModels\Languages\OneSVM.cs" />
     <Compile Include="ViewModels\Languages\PythonVM.cs" />
     <Compile Include="ViewModels\Languages\PHPVM.cs" />
@@ -311,7 +311,7 @@
     <Resource Include="Resources\Images\TypeScript.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Images\Back.png" />
+    <Resource Include="Resources\Images\Icons\Back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
