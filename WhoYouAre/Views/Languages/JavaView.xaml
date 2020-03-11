@@ -28,18 +28,25 @@
                                   Color="#4A76C9"
 								  ShadowDepth="0"/>
 			</Border.Effect>
-			
+
 			<Grid Grid.Row="0">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 
-				<TextBlock Text="Java"
-						   Grid.Row="0"
+				<Image Source="pack://application:,,,/Resources/Images/Java.png" Grid.Row="0" Height="70" Width="150" Margin="5"/>
+
+				<TextBlock Text="На сегодняшний момент язык Java является одним из самых распространенных и популярных языков программирования. Первая версия языка появилась еще в 1996 году в недрах компании Sun Microsystems, впоследствии поглощенной компанией Oracle. Java задумывался как универсальный язык программирования, который можно применять для различного рода задач. И к настоящему времени язык Java проделал большой путь, было издано множество различных версий. Текущей версией является Java 12, которая вышла в марте 2019 года. А Java превратилась из просто универсального языка в целую платформу и экосистему, которая объединяет различные технологии, используемые в целом ряде задач: от создания десктопных приложений до написания крупных веб-порталов и сервисов. Кроме того, язык Java активно применяется для создания программного обеспечения для целого ряда устройств: обычных ПК, планшетов, смартфонов и мобильных телефонов и даже бытовой техники. Достаточно вспомнить популярность мобильной ОС Android, большинство программ для которой пишутся именно на Java."
+						   Grid.Row="1"
 						   FontSize="12"
+						   TextWrapping="Wrap"
 						   Margin="5"/>
+
+				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
+				<Button Content="Выйти:(" Command="{Binding NavigateToLoginCommand}" Style="{StaticResource ButtonStyle}" Background="Red" Grid.Row="3" Margin="5"/>
 			</Grid>
 		</Border>
 	</Grid>

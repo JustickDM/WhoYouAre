@@ -28,18 +28,25 @@
                                   Color="#4A76C9"
 								  ShadowDepth="0"/>
 			</Border.Effect>
-			
+
 			<Grid Grid.Row="0">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 
-				<TextBlock Text="JavaScript"
-						   Grid.Row="0"
+				<Image Source="pack://application:,,,/Resources/Images/JavaScript.png" Grid.Row="0" Height="70" Width="150" Margin="5"/>
+
+				<TextBlock Text="Сегодняшний мир веб-сайтов трудно представить без языка JavaScript. JavaScript - это то, что делает живыми веб-страницы, которые мы каждый день просматриваем в своем веб-браузере. JavaScript был создан в 1995 году в компании Netscape в качестве языка сценариев в браузере Netscape Navigator 2. Первоначально язык назывался LiveScript, но на волне популярности в тот момент другого языка Java LiveScript был переименован в JavaScript. Однако данный момент до сих пор иногда приводит к некоторой путанице: некоторые начинающие разработчики считают, что Java и JavaScript чуть ли не один и тот же язык. Нет, это абсолютно два разных языка, и они связаны только по названию. Первоначально JavaScript обладал довольно небольшими возможностями. Его цель состояла лишь в том, чтобы добавить немного поведения на веб-страницу. Например, обработать нажатие кнопок на веб-странице, произвести какие-нибудь другие действия, связанные прежде всего с элементами управления. В последнее время переживает бум сфера мобильной разработки. И JavaScript опять же не остается в стороне: увеличение мощности устройств и повсеместное распространение стандарта HTML5 привело к тому, что для создания приложений для смартфонов и планшетов мы также можем использовать JavaScript"
+						   Grid.Row="1"
 						   FontSize="12"
+						   TextWrapping="Wrap"
 						   Margin="5"/>
+
+				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
+				<Button Content="Выйти:(" Command="{Binding NavigateToLoginCommand}" Style="{StaticResource ButtonStyle}" Background="Red" Grid.Row="3" Margin="5"/>
 			</Grid>
 		</Border>
 	</Grid>

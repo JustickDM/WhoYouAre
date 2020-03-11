@@ -58,29 +58,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controllers\Languages\OneSVM.cs" />
-    <Compile Include="Controllers\Languages\PythonVM.cs" />
-    <Compile Include="Controllers\Languages\PHPVM.cs" />
-    <Compile Include="Controllers\Languages\KotlinVM.cs" />
-    <Compile Include="Controllers\Languages\JavaVM.cs" />
-    <Compile Include="Controllers\Languages\TypeScriptVM.cs" />
-    <Compile Include="Controllers\Languages\JavaScriptVM.cs" />
-    <Compile Include="Controllers\Languages\GoVM.cs" />
-    <Compile Include="Controllers\Languages\CVM.cs" />
-    <Compile Include="Controllers\Languages\CSharpVM.cs" />
-    <Compile Include="Controllers\Languages\CPlusPlusVM.cs" />
-    <Compile Include="Controllers\Languages\AssemblerVM.cs" />
-    <Compile Include="Controllers\LoginVM.cs" />
-    <Compile Include="Controllers\Questions\Question21VM.cs" />
-    <Compile Include="Controllers\Questions\Question36VM.cs" />
-    <Compile Include="Controllers\Questions\Question35VM.cs" />
-    <Compile Include="Controllers\Questions\Question34VM.cs" />
-    <Compile Include="Controllers\Questions\Question33VM.cs" />
-    <Compile Include="Controllers\Questions\Question32VM.cs" />
-    <Compile Include="Controllers\Questions\Question31VM.cs" />
-    <Compile Include="Controllers\Questions\Question23VM.cs" />
-    <Compile Include="Controllers\Questions\Question22VM .cs" />
-    <Compile Include="Controllers\Questions\Question1VM.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="ViewModels\BaseLanguageVM.cs" />
+    <Compile Include="ViewModels\Languages\OneSVM.cs" />
+    <Compile Include="ViewModels\Languages\PythonVM.cs" />
+    <Compile Include="ViewModels\Languages\PHPVM.cs" />
+    <Compile Include="ViewModels\Languages\KotlinVM.cs" />
+    <Compile Include="ViewModels\Languages\JavaVM.cs" />
+    <Compile Include="ViewModels\Languages\TypeScriptVM.cs" />
+    <Compile Include="ViewModels\Languages\JavaScriptVM.cs" />
+    <Compile Include="ViewModels\Languages\GoVM.cs" />
+    <Compile Include="ViewModels\Languages\CVM.cs" />
+    <Compile Include="ViewModels\Languages\CPlusPlusVM.cs" />
+    <Compile Include="ViewModels\Languages\CSharpVM.cs" />
+    <Compile Include="ViewModels\Languages\AssemblerVM.cs" />
+    <Compile Include="ViewModels\LoginVM.cs" />
+    <Compile Include="ViewModels\Questions\Question21VM.cs" />
+    <Compile Include="ViewModels\Questions\Question36VM.cs" />
+    <Compile Include="ViewModels\Questions\Question35VM.cs" />
+    <Compile Include="ViewModels\Questions\Question34VM.cs" />
+    <Compile Include="ViewModels\Questions\Question33VM.cs" />
+    <Compile Include="ViewModels\Questions\Question32VM.cs" />
+    <Compile Include="ViewModels\Questions\Question31VM.cs" />
+    <Compile Include="ViewModels\Questions\Question23VM.cs" />
+    <Compile Include="ViewModels\Questions\Question22VM .cs" />
+    <Compile Include="ViewModels\Questions\Question1VM.cs" />
     <Compile Include="Views\Languages\GoView.xaml.cs">
       <DependentUpon>GoView.xaml</DependentUpon>
     </Compile>
@@ -157,7 +159,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\StartVM.cs" />
+    <Compile Include="ViewModels\StartVM.cs" />
     <Page Include="Views\Languages\GoView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -282,6 +284,34 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\CPlusPlus.png" />
+    <Resource Include="Resources\Images\CSharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Assembler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Go.png" />
+    <Resource Include="Resources\Images\Java.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\JavaScript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Kotlin.png" />
+    <Resource Include="Resources\Images\OneS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\PHP.png" />
+    <Resource Include="Resources\Images\Python.png" />
+    <Resource Include="Resources\Images\TypeScript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

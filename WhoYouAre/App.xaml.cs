@@ -4,6 +4,7 @@ using MVVMAqua.Enums;
 using System.Windows;
 
 using WhoYouAre.ViewModels;
+using WhoYouAre.Models;
 
 namespace WhoYouAre
 {
@@ -12,6 +13,8 @@ namespace WhoYouAre
 	/// </summary>
 	public partial class App : Application
 	{
+		public static User User { get; set; }
+
 		protected override void OnStartup(StartupEventArgs e)
 		{
 			base.OnStartup(e);
@@ -20,8 +23,8 @@ namespace WhoYouAre
 			var bootstrapper = bootstrapperBuilder.Build();
 
 			bootstrapper.OpenNewWindow(
-				new StartVM(),
-				vm => vm.WindowTitle = "Приветствие",
+				new LoginVM(),
+				vm => vm.WindowTitle = string.Empty,
 				null,
 				null,
 				nav => nav.ViewNavigator.ShowDialog("Вы точно хотите выйти из программы?", ModalIcon.Question, "Выход", "Выйти", "Отмена"));

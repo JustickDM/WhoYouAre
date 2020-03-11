@@ -32,14 +32,21 @@
 			<Grid Grid.Row="0">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 
-				<TextBlock Text="Go"
-						   Grid.Row="0"
+				<Image Source="pack://application:,,,/Resources/Images/Go.png" Grid.Row="0" Height="70" Width="150" Margin="5"/>
+				
+				<TextBlock Text="Go представляет компилируемый статически типизированный язык программирования от компании Google. Язык Go предназначен для создания различного рода приложений, но прежде всего это веб-сервисы и клиент-серверные приложения. Хотя также язык обладает возможностями по работе с графикой, низкоуровневыми возможностями и т.д. Работа над языком Go началась в 2007 в недрах компании Google. Одним из авторов является Кен Томпсон, который, к слову, является и одним из авторов языка Си (наряду с Денисом Ритчи). 10 ноября 2009 года язык был анонсирован, а в марте 2012 года вышла версия 1.0. При этом язык продолжает развиваться. Go является кроссплатформенным, он позволяет создавать программы под различные операционные системы - Windows, Mac OS, Linux, FreeBSD. Код обладает переносимостью: программы, написанные для одной из этих операционных систем, могут быть легко с перекомпиляцией перенесены на другую ОС.В настоящее время Go находит широкое применение в различных сферах. В частности, среди известных проектов, которые применяют Go, можно найти следующие: Google, Dropbox, Netflix, Kubernetes, Docker, Twitch, Uber, CloudFlare и ряд других."
+						   Grid.Row="1"
 						   FontSize="12"
+						   TextWrapping="Wrap"
 						   Margin="5"/>
+
+				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
+				<Button Content="Выйти:(" Command="{Binding NavigateToLoginCommand}" Style="{StaticResource ButtonStyle}" Background="Red" Grid.Row="3" Margin="5"/>
 			</Grid>
 		</Border>
 	</Grid>

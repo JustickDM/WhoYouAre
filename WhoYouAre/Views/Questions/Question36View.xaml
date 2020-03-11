@@ -13,19 +13,58 @@
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="40"/>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 
-		<Button Content="Назад" Command="{Binding GoBackCommand}" Grid.Row="0" Grid.Column="0"/>
-		
-		<TextBlock Text="Нравится ли Вам желтый цвет?" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<Button Content="Да" Command="{Binding NavigateTo1CCommand}" Grid.Row="2" Grid.Column="0"/>
-		<Button Content="Нет" Command="{Binding NavigateToGoCommand}" Grid.Row="2" Grid.Column="1"/>
+		<Rectangle Grid.Row="0" 
+				   Grid.ColumnSpan="3" 
+				   Fill="#FF4A76C9">
+		</Rectangle>
+
+		<StackPanel Grid.Row="0" 
+					Grid.ColumnSpan ="3" 
+					Orientation="Horizontal">
+
+			<Button Style="{StaticResource BackButtonStyle}"
+					Command="{Binding GoBackCommand}"/>
+
+			<Label Content="Третий вопрос"
+				   Foreground="White"
+				   FontFamily="Rototo"
+				   FontSize="16"
+				   HorizontalAlignment="Stretch"
+				   VerticalAlignment="Center"
+				   HorizontalContentAlignment="Stretch"
+				   VerticalContentAlignment="Center"/>
+		</StackPanel>
+
+		<Border BorderBrush="#4A76C9"
+				Grid.Row="1"
+				Grid.ColumnSpan="3"
+                BorderThickness="1"
+                CornerRadius="3"
+				Background="White"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center">
+
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="5"
+                                  Color="#4A76C9"
+								  ShadowDepth="0"/>
+			</Border.Effect>
+
+			<StackPanel Margin="5">
+				<TextBlock Text="Нравится ли Вам желтый цвет?" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="5"/>
+				<Button Content="Да" Command="{Binding NavigateTo1CCommand}" Style="{StaticResource ButtonStyle}" Margin="5"/>
+				<Button Content="Нет" Command="{Binding NavigateToGoCommand}" Style="{StaticResource ButtonStyle}" Margin="5"/>
+			</StackPanel>
+		</Border>
 	</Grid>
 </UserControl>

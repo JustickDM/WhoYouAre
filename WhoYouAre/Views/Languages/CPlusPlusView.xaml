@@ -32,14 +32,21 @@
 			<Grid Grid.Row="0">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 
-				<TextBlock Text="C++"
-						   Grid.Row="0"
+				<Image Source="pack://application:,,,/Resources/Images/CPlusPlus.png" Grid.Row="0" Height="70" Width="70" Margin="5"/>
+
+				<TextBlock Text="Язык программирования С++ представляет высокоуровневый компилируемый язык программирования общего назначения со статической типизацией, который подходит для создания самых различных приложений. На сегодняшний день С++ является одним из самых популярных и распространенных языков. ОС Windows большей частью написана на С++. Но только системным программированием применение данного языка не ограничивается. С++ можно использовать в программах любого уровня, где важны скорость работы и производительность. Нередко он применяется для создания графических приложений, различных прикладных программ. Также особенно часто его используют для создания игр с богатой насыщенной визуализацией. Кроме того, в последнее время набирает ход мобильное направление, где С++ тоже нашел свое применение. И даже в веб-разработке также можно использовать С++ для создания веб-приложений или каких-то вспомогательных сервисов, которые обслуживают веб-приложения. В общем С++ - язык широкого пользования, на котором можно создавать практически любые виды программ"
+						   Grid.Row="1" 
 						   FontSize="12"
+						   TextWrapping="Wrap"
 						   Margin="5"/>
+
+				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
+				<Button Content="Выйти:(" Command="{Binding NavigateToLoginCommand}" Style="{StaticResource ButtonStyle}" Background="Red" Grid.Row="3" Margin="5"/>
 			</Grid>
 		</Border>
 	</Grid>

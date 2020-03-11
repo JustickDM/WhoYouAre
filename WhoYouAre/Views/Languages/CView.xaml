@@ -28,18 +28,25 @@
                                   Color="#4A76C9"
 								  ShadowDepth="0"/>
 			</Border.Effect>
-			
+
 			<Grid Grid.Row="0">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 
-				<TextBlock Text="C"
-						   Grid.Row="0"
+				<Image Source="pack://application:,,,/Resources/Images/C.png" Grid.Row="0" Height="70" Width="70" Margin="5"/>
+
+				<TextBlock Text="Язык программирования С (си) является одним из самых популярных и распространенных языков. Он представляет компилируемый язык программирования общего назначения со статической типизацией, разработанный в 1969—1973 годах в компании Bell Labs программистом Деннисом Ритчи (Dennis Ritchie). Первоначально язык С предназначался для написания операционной системы Unix. Впоследствии Си стал одним из популярных языков, а его основной сферой применения стало системное программирование, в частности, создание операционных систем, драйверов, различных утилит, антивирусов и т.д. К слову сказать, Linux большей частью написан на Си. Однако только системным программированием применение данного языка не ограничивается. Данный язык можно использовать в программах любого уровня, где важны скорость работы и производительность. Так, мы можем писать с помощью Си и прикладные приложения, и даже веб-сайты (используя технологию CGI - Common Gateway Interface). Но, конечно, для создания графического интерфейса и веб-приложений, как правило, выбираются более подходящие инструменты и технологии, но тем не менее круг использования Си довольно широк. Это в немалой степени определило популярность языка. Например, в известном рейтинге языков программирования TIOBE язык С долгое время уверенно удерживает второе место"
+						   Grid.Row="1"
 						   FontSize="12"
+						   TextWrapping="Wrap"
 						   Margin="5"/>
+
+				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
+				<Button Content="Выйти:(" Command="{Binding NavigateToLoginCommand}" Style="{StaticResource ButtonStyle}" Background="Red" Grid.Row="3" Margin="5"/>
 			</Grid>
 		</Border>
 	</Grid>

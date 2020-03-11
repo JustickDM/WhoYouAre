@@ -28,18 +28,25 @@
                                   Color="#4A76C9"
 								  ShadowDepth="0"/>
 			</Border.Effect>
-			
+
 			<Grid Grid.Row="0">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 
-				<TextBlock Text="Kotlin"
-						   Grid.Row="0"
+				<Image Source="pack://application:,,,/Resources/Images/Kotlin.png" Grid.Row="0" Height="70" Width="150" Margin="5"/>
+
+				<TextBlock Text="Kotlin представляет статически типизированный язык программирования от компании JetBrains. Kotlin можно использовать для создания мобильных и веб-приложений. Kotlin работает поверх виртуальной машины Java (JVM) и при компиляции компилируется в байткод. То есть, как и в случае с Java, мы можем запускать приложение на Kotlin везде, где установлена JVM. Хотя также можно компилировать код в JavaScript и запускать в браузере. И, кроме того, можно компилировать код Kotlin в нативные бинарные файлы, которые будут работать без всякой виртуальной машины. Таким образом, круг платформ, для которых можно создавать приложения на Kotlin, чрезвычайно широк - Windows, Linux, Mac OS, iOS, Android"
+						   Grid.Row="1"
 						   FontSize="12"
+						   TextWrapping="Wrap"
 						   Margin="5"/>
+
+				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
+				<Button Content="Выйти:(" Command="{Binding NavigateToLoginCommand}" Style="{StaticResource ButtonStyle}" Background="Red" Grid.Row="3" Margin="5"/>
 			</Grid>
 		</Border>
 	</Grid>
