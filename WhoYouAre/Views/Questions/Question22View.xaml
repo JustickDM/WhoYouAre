@@ -24,13 +24,7 @@
 					Command="{Binding GoBackCommand}"/>
 
 			<Label Content="Второй вопрос"
-				   Foreground="White"
-				   FontFamily="Rototo"
-				   FontSize="16"
-				   HorizontalAlignment="Stretch"
-				   VerticalAlignment="Center"
-				   HorizontalContentAlignment="Stretch"
-				   VerticalContentAlignment="Center"/>
+				   Style="{StaticResource labelTitleStyle}"/>
 		</StackPanel>
 
 		<Border Style="{StaticResource borderStyle}"
