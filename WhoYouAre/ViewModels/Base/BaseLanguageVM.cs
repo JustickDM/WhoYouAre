@@ -11,7 +11,7 @@ namespace WhoYouAre.ViewModels.Base
 	internal abstract class BaseLanguageVM : BaseVM
 	{
 		public RelayCommand NavigateTo1Command { get; }
-		public RelayCommand NavigateToLoginCommand { get; }
+		public RelayCommand NavigateToStartCommand { get; }
 
 		public BaseLanguageVM()
 		{
@@ -19,7 +19,7 @@ namespace WhoYouAre.ViewModels.Base
 			{
 				ViewNavigator.NavigateTo(new Question1VM());
 			});
-			NavigateToLoginCommand = new RelayCommand(() =>
+			NavigateToStartCommand = new RelayCommand(() =>
 			{
 				var user = App.User;
 				var result = $"{user.FirstName} {user.LastName} {user.DateOfBirth} {user.Language}";
