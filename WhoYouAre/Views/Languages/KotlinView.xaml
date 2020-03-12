@@ -2,27 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -41,8 +30,7 @@
 
 				<TextBlock Text="Kotlin представляет статически типизированный язык программирования от компании JetBrains. Kotlin можно использовать для создания мобильных и веб-приложений. Kotlin работает поверх виртуальной машины Java (JVM) и при компиляции компилируется в байткод. То есть, как и в случае с Java, мы можем запускать приложение на Kotlin везде, где установлена JVM. Хотя также можно компилировать код в JavaScript и запускать в браузере. И, кроме того, можно компилировать код Kotlin в нативные бинарные файлы, которые будут работать без всякой виртуальной машины. Таким образом, круг платформ, для которых можно создавать приложения на Kotlin, чрезвычайно широк - Windows, Linux, Mac OS, iOS, Android"
 						   Grid.Row="1"
-						   FontSize="12"
-						   TextWrapping="Wrap"
+						   Style="{StaticResource textBlockStyle}"
 						   Margin="5"/>
 
 				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>

@@ -2,27 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -41,8 +30,7 @@
 
 				<TextBlock Text="Сегодняшний мир веб-сайтов трудно представить без языка JavaScript. JavaScript - это то, что делает живыми веб-страницы, которые мы каждый день просматриваем в своем веб-браузере. JavaScript был создан в 1995 году в компании Netscape в качестве языка сценариев в браузере Netscape Navigator 2. Первоначально язык назывался LiveScript, но на волне популярности в тот момент другого языка Java LiveScript был переименован в JavaScript. Однако данный момент до сих пор иногда приводит к некоторой путанице: некоторые начинающие разработчики считают, что Java и JavaScript чуть ли не один и тот же язык. Нет, это абсолютно два разных языка, и они связаны только по названию. Первоначально JavaScript обладал довольно небольшими возможностями. Его цель состояла лишь в том, чтобы добавить немного поведения на веб-страницу. Например, обработать нажатие кнопок на веб-странице, произвести какие-нибудь другие действия, связанные прежде всего с элементами управления. В последнее время переживает бум сфера мобильной разработки. И JavaScript опять же не остается в стороне: увеличение мощности устройств и повсеместное распространение стандарта HTML5 привело к тому, что для создания приложений для смартфонов и планшетов мы также можем использовать JavaScript"
 						   Grid.Row="1"
-						   FontSize="12"
-						   TextWrapping="Wrap"
+						   Style="{StaticResource textBlockStyle}"
 						   Margin="5"/>
 
 				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>

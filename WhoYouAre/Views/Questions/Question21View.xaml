@@ -3,13 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter"/>
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
@@ -45,15 +40,9 @@
 				   VerticalContentAlignment="Center"/>
 		</StackPanel>
 
-		<Border BorderBrush="#4A76C9"
+		<Border Style="{StaticResource borderStyle}"
 				Grid.Row="1"
-				Grid.ColumnSpan="3"
-                BorderThickness="1"
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+				Grid.ColumnSpan="3">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -61,7 +50,7 @@
 			</Border.Effect>
 
 			<StackPanel Margin="5">
-				<TextBlock Text="Смартфон или компьютер?" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="5"/>
+				<Label Content="Смартфон или компьютер?" Style="{StaticResource labelTextStyle}" Margin="5"/>
 				<Button Content="Смартфон" Command="{Binding NavigateTo31Command}" Style="{StaticResource ButtonStyle}" Margin="5"/>
 				<Button Content="Компьютер" Command="{Binding NavigateTo32Command}" Style="{StaticResource ButtonStyle}" Margin="5"/>
 			</StackPanel>

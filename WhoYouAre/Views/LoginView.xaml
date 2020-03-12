@@ -16,13 +16,7 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"

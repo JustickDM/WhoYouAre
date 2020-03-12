@@ -2,27 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -41,8 +30,7 @@
 
 				<TextBlock Text="Язык программирования С (си) является одним из самых популярных и распространенных языков. Он представляет компилируемый язык программирования общего назначения со статической типизацией, разработанный в 1969—1973 годах в компании Bell Labs программистом Деннисом Ритчи (Dennis Ritchie). Первоначально язык С предназначался для написания операционной системы Unix. Впоследствии Си стал одним из популярных языков, а его основной сферой применения стало системное программирование, в частности, создание операционных систем, драйверов, различных утилит, антивирусов и т.д. К слову сказать, Linux большей частью написан на Си. Однако только системным программированием применение данного языка не ограничивается. Данный язык можно использовать в программах любого уровня, где важны скорость работы и производительность. Так, мы можем писать с помощью Си и прикладные приложения, и даже веб-сайты (используя технологию CGI - Common Gateway Interface). Но, конечно, для создания графического интерфейса и веб-приложений, как правило, выбираются более подходящие инструменты и технологии, но тем не менее круг использования Си довольно широк. Это в немалой степени определило популярность языка. Например, в известном рейтинге языков программирования TIOBE язык С долгое время уверенно удерживает второе место"
 						   Grid.Row="1"
-						   FontSize="12"
-						   TextWrapping="Wrap"
+						   Style="{StaticResource textBlockStyle}"
 						   Margin="5"/>
 
 				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>

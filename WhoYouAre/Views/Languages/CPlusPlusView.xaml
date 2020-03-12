@@ -2,27 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -40,9 +29,8 @@
 				<Image Source="pack://application:,,,/Resources/Images/CPlusPlus.png" Grid.Row="0" Height="70" Width="70" Margin="5"/>
 
 				<TextBlock Text="Язык программирования С++ представляет высокоуровневый компилируемый язык программирования общего назначения со статической типизацией, который подходит для создания самых различных приложений. На сегодняшний день С++ является одним из самых популярных и распространенных языков. ОС Windows большей частью написана на С++. Но только системным программированием применение данного языка не ограничивается. С++ можно использовать в программах любого уровня, где важны скорость работы и производительность. Нередко он применяется для создания графических приложений, различных прикладных программ. Также особенно часто его используют для создания игр с богатой насыщенной визуализацией. Кроме того, в последнее время набирает ход мобильное направление, где С++ тоже нашел свое применение. И даже в веб-разработке также можно использовать С++ для создания веб-приложений или каких-то вспомогательных сервисов, которые обслуживают веб-приложения. В общем С++ - язык широкого пользования, на котором можно создавать практически любые виды программ"
-						   Grid.Row="1" 
-						   FontSize="12"
-						   TextWrapping="Wrap"
+						   Grid.Row="1"
+						   Style="{StaticResource textBlockStyle}"
 						   Margin="5"/>
 
 				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>

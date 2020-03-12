@@ -2,27 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -41,8 +30,7 @@
 
 				<TextBlock Text="Ассемблер (Assembly) — язык программирования, понятия которого отражают архитектуру электронно-вычислительной машины. Язык ассемблера — символьная форма записи машинного кода, использование которого упрощает написание машинных программ. Для одной и той же ЭВМ могут быть разработаны разные языки ассемблера. В отличие от языков высокого уровня абстракции, в котором многие проблемы реализации алгоритмов скрыты от разработчиков, язык ассемблера тесно связан с системой команд микропроцессора. Для идеального микропроцессора, у которого система команд точно соответствует языку программирования, ассемблер вырабатывает по одному машинному коду на каждый оператор языка. На практике для реальных микропроцессоров может потребоваться несколько машинных команд для реализации одного оператора языка. Главное достоинство языка ассемблера — «приближенность» к процессору, который является основой используемого программистом компьютера, а главным неудобством — слишком мелкое деление типовых операций, которое большинством пользователей воспринимается с трудом. Однако язык ассемблера в значительно большей степени отражает само функционирование компьютера, чем все остальные языки."
 						   Grid.Row="1"
-						   FontSize="12"
-						   TextWrapping="Wrap"
+						   Style="{StaticResource textBlockStyle}"
 						   Margin="5"/>
 
 				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>

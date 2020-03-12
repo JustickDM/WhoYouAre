@@ -2,27 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converters="clr-namespace:MVVMAqua.Converters;assembly=MVVMAqua"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" >
-
-	<UserControl.Resources>
-		<converters:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-	</UserControl.Resources>
 
 	<Grid Background="#EDEEF0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Border BorderBrush="#4A76C9"
-                BorderThickness="1" 
-                CornerRadius="3"
-				Background="White"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center">
-
+		<Border Style="{StaticResource borderStyle}">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
@@ -41,8 +30,7 @@
 
 				<TextBlock Text="Фирма «1С» (произносится один эс) — российская компания, специализирующаяся на дистрибуции, поддержке и разработке компьютерных программ и баз данных делового и домашнего назначения. Из разработок фирмы «1С» наиболее известны программные системы «1С:Предприятие», а также продукты для образовательной сферы: серия учебных программ «1С:Репетитор», серия «1С:Школа» на платформе «1С:Образование». «1C Game Studios» разрабатывает, а также переводит и издаёт различные компьютерные игры. Система программ «1С:Предприятие 8.х» включает в себя саму платформу и программные продукты, разработанные на ее основе для ведения учета, например «1С:Бухгалтерия 8». На одной платформе можно автоматизировать деятельность подразделений компании, разных компаний и направлений бизнеса, докупая соответствующие конфигурации программ и интегрируя их в единое информационное пространство. Платформа «1С:Предприятие 8.х» учитывает многолетний опыт применения системы программ «1С:Предприятие» предыдущих версий, которые используют десятки тысяч разработчиков и на которой работают сотни тиражных и сотни тысяч заказных прикладных решений. Благодаря этому новая версия «1С:Предприятие 8.2» сохранила идеологическую преемственность с предыдущими версиями"
 						   Grid.Row="1"
-						   FontSize="12"
-						   TextWrapping="Wrap"
+						   Style="{StaticResource textBlockStyle}"
 						   Margin="5"/>
 
 				<Button Content="Попробовать еще раз?:)" Command="{Binding NavigateTo1Command}" Style="{StaticResource ButtonStyle}" Background="Green" Grid.Row="2" Margin="5"/>
