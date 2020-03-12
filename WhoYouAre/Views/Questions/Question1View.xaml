@@ -12,19 +12,12 @@
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*"/>
-			<ColumnDefinition Width="*"/>
-			<ColumnDefinition Width="*"/>
-		</Grid.ColumnDefinitions>
 
-		<Rectangle Grid.Row="0" 
-				   Grid.ColumnSpan="3" 
+		<Rectangle Grid.Row="0"
 				   Fill="#FF4A76C9">
 		</Rectangle>
 
-		<StackPanel Grid.Row="0" 
-					Grid.ColumnSpan ="3" 
+		<StackPanel Grid.Row="0"
 					Orientation="Horizontal">
 
 			<Label Content="Первый вопрос"
@@ -38,8 +31,7 @@
 		</StackPanel>
 
 		<Border Style="{StaticResource borderStyle}"
-				Grid.Row="1"
-				Grid.ColumnSpan="3">
+				Grid.Row="1">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="5"
                                   Color="#4A76C9"
