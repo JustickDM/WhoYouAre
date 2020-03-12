@@ -23,7 +23,7 @@ namespace WhoYouAre
 			var bootstrapper = bootstrapperBuilder.Build();
 
 			bootstrapper.OpenNewWindow(
-				new LoginVM(),
+				new StartVM(),
 				vm => vm.WindowTitle = string.Empty,
 				null,
 				null,

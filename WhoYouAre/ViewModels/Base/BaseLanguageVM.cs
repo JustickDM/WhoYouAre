@@ -29,7 +29,7 @@ namespace WhoYouAre.ViewModels.Base
 
 				File.AppendAllText("Users", sb.ToString());
 
-				ViewNavigator.NavigateTo(new LoginVM());
+				ViewNavigator.NavigateTo(new StartVM());
 			});
 		}
 	}
